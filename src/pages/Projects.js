@@ -5,7 +5,7 @@ import { projects } from "../data";
 
 const ProjectContainer = styled.div`
   padding: 6rem 12% 6rem;
-  background: #ffffff;
+  background: #f7f4ef;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
 
@@ -19,7 +19,7 @@ const Heading = styled.h1`
   font-size: 2.2rem;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-family: 'Clash Grotesk', sans-serif;
 `;
 
@@ -67,12 +67,13 @@ const Card = styled.div`
 
   a {
     font-size: 0.9rem;
-    color: #a3b18a;
+    color: #e6b8a2;
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: underline;
+      color:rgb(229, 145, 106);
+
     }
   }
 `;
@@ -88,9 +89,15 @@ const Projects = () => {
             <img src={project.image} alt={project.title} />
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
-              Link to GitHub
-            </a>
+            {project.github ? (
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            ) : (
+              <a href={project.figma} target="_blank" rel="noopener noreferrer">
+                Figma
+              </a>
+            )}
           </Card>
         ))}
       </Grid>

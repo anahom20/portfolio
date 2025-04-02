@@ -7,7 +7,7 @@ const Container = styled.div`
   align-items: center;
   padding: 6rem 12%;
   min-height: 85vh;
-  background: linear-gradient(to bottom, #ffffff 70%, #d7e5cf 30%);
+  background: linear-gradient(to bottom, #f7f4ef 70%,rgb(232, 191, 174) 30%);
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
@@ -62,6 +62,7 @@ const ImageBlock = styled.div`
     object-fit: cover;
     border: 2px solid #e0e7ff;
     background: #fefeff;
+    transform: scale(1.05); /* <-- This is the zoom */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 
     @media (max-width: 768px) {
@@ -74,7 +75,7 @@ const ImageBlock = styled.div`
 
 const ProjectsSection = styled.section`
   padding: 6rem 12%;
-  background: #d7e5cf;
+  background: #e8bfae;
 
   margin-top: -4rem;
   
@@ -139,13 +140,12 @@ const Home = () => {
         <h1>Hi, I’m Mohana.</h1>
         <h2>Computer Science and Design, AI minor</h2>
         <p>
-          Blending AI-driven intelligence with intuitive design to craft smart,
-          user-centric digital experiences.
+        A design thinker crafting user-centric experiences and AI-powered solutions to meaningfully serve people.
         </p>
       </TextBlock>
 
       <ImageBlock>
-        <img src="/profile.jpg" alt="Portrait" />
+        <img src="/images/profile.JPG" alt="Portrait" />
       </ImageBlock>
     </Container>
 
@@ -154,14 +154,14 @@ const Home = () => {
     <ProjectsGrid>
       <ProjectCard href="https://your-project-link.com" target="_blank" rel="noopener noreferrer">
         <img src="/project1-thumbnail.jpg" alt="Project 1" />
-        <h4>Project Title 1</h4>
-        <p>Short description of what this project does or solves.</p>
+        <h4>Lumify.</h4>
+        <p>Digital solution to reconnect HDB neighbors and revive the Kampung spirit</p>
       </ProjectCard>
 
       <ProjectCard href="https://your-project-link.com" target="_blank" rel="noopener noreferrer">
         <img src="/project2-thumbnail.jpg" alt="Project 2" />
-        <h4>Project Title 2</h4>
-        <p>Short description of this second project, ideally one sentence.</p>
+        <h4>STEVFNS-P</h4>
+        <p>Web Application for energy systems optimisation</p>
       </ProjectCard>
     </ProjectsGrid>
     </ProjectsSection>

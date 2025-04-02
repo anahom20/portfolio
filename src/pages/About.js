@@ -4,7 +4,7 @@ import styled from "styled-components";
 const AboutContainer = styled.div`
   padding: 6rem 12% 6rem;
   min-height: 85vh;
-  background-color: #ffffff;
+  background-color: #f7f4ef;
   font-family: 'Inter', sans-serif;
   @media (max-width: 768px) {
     padding: 3rem 2rem;
@@ -40,7 +40,7 @@ const ButtonGroup = styled.div`
 
 const Button = styled.a`
   padding: 0.75rem 1.5rem;
-  background-color: #a3b18a; 
+  background-color: #e6b8a2; 
   color: white;
   font-size: 0.95rem;
   font-weight: 600;
@@ -49,18 +49,18 @@ const Button = styled.a`
   transition: background 0.3s;
 
   &:hover {
-    background-color: #8f9f78;
+    background-color:rgb(229, 145, 106);
   }
 `;
 
 const About = () => {
   return (
     <AboutContainer>
-      <Heading>About Me</Heading>
+      <Heading>Hi.</Heading>
       <Paragraph>
-        I’m a final-year Computer Science student with an AI minor, specializing in Data Analytics and Fintech. 
-        I love using technology to simplify complex problems — especially through beautiful, intuitive interfaces.
-        My interests sit at the intersection of AI, UI/UX, and frontend engineering.
+      I'm a final-year Computer Science student with a minor in AI, focused on Data Analytics and Fintech. 
+      I’m passionate about creating AI-driven solutions grounded in user-centered design — building impactful tech 
+      that’s both intelligent and intuitive, designed to serve people through better experiences.
       </Paragraph>
 
       <ButtonGroup>
