@@ -56,9 +56,9 @@ const Button = styled.a`
 const About = () => {
   return (
     <AboutContainer>
-      <Heading>Hi.</Heading>
+      <Heading>Hiya.</Heading>
       <Paragraph>
-      I'm a final-year Computer Science student with a minor in AI, focused on Data Analytics and Fintech. 
+      I'm a final-year Computer Science and Design (Minor in AI) student from SUTD, focused on Data Analytics and Fintech. 
       I’m passionate about creating AI-driven solutions grounded in user-centered design — building impactful tech 
       that’s both intelligent and intuitive, designed to serve people through better experiences.
       </Paragraph>

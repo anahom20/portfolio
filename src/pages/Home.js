@@ -137,7 +137,7 @@ const Home = () => {
     <>
     <Container>
       <TextBlock>
-        <h1>Hi, I’m Mohana.</h1>
+        <h1 className="typewriter">Hi, I’m Mohana.</h1>
         <h2>Computer Science and Design, AI minor</h2>
         <p>
         A design thinker crafting user-centric experiences and AI-powered solutions to meaningfully serve people.
@@ -149,7 +149,7 @@ const Home = () => {
       </ImageBlock>
     </Container>
 
-    <ProjectsSection>
+    {/* <ProjectsSection>
     <h3>Projects</h3>
     <ProjectsGrid>
       <ProjectCard href="https://your-project-link.com" target="_blank" rel="noopener noreferrer">
@@ -164,7 +164,7 @@ const Home = () => {
         <p>Web Application for energy systems optimisation</p>
       </ProjectCard>
     </ProjectsGrid>
-    </ProjectsSection>
+    </ProjectsSection> */}
 </>
     
   );

@@ -30,7 +30,27 @@ const GlobalStyles = createGlobalStyle`
     border: none;
     background: none;
   }
+
+  @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(20, end) forwards;
+  width: 12ch; /* or however long your text is */
+}
+
+
 `;
+
 
 
 export default GlobalStyles;

@@ -37,6 +37,10 @@ const Card = styled.div`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   text-align: center;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%; // make sure all cards are equal height
 
   &:hover {
     transform: translateY(-5px);
@@ -46,9 +50,12 @@ const Card = styled.div`
 
   img {
     width: 100%;
-    max-width: 280px;
+    max-width: 480px;
     margin: 0 auto 1.5rem;
     display: block;
+    height: 200px;
+    object-fit: contain;
+
   }
 
   h2 {
@@ -86,7 +93,7 @@ const Projects = () => {
       <Grid>
         {projects.map((project, index) => (
           <Card key={index}>
-            <img src={project.image} alt={project.title} />
+          <img src={project.image} alt={project.title} />
             <h2>{project.title}</h2>
             <p>{project.description}</p>
             {project.github ? (
