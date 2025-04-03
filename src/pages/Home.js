@@ -6,7 +6,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 6rem 12%;
-  min-height: 85vh;
+  min-height: 90vh;
   background: linear-gradient(to bottom, #f7f4ef 70%,rgb(232, 191, 174) 30%);
 
   @media (max-width: 768px) {

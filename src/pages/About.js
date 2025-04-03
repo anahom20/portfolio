@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const AboutContainer = styled.div`
   padding: 6rem 12% 6rem;
-  min-height: 85vh;
+  min-height: 90vh;
   background-color: #f7f4ef;
   font-family: 'Inter', sans-serif;
   @media (max-width: 768px) {
