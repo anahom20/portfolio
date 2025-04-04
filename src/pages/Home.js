@@ -146,6 +146,33 @@ const ExperienceCard = styled.div`
   }
 `;
 
+const ScrollDownArrow = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: -2rem;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: #4b5563;
+    stroke-width: 2;
+    fill: none;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
+`;
+
+
+
 
 
 
@@ -166,15 +193,23 @@ const Home = () => {
       </ImageBlock>
     </Container>
 
-    <ExperienceContainer>
-      <ExperienceHeading>Work Experience</ExperienceHeading>
+    <ScrollDownArrow onClick={() => document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })}>
+  <svg viewBox="0 0 24 24">
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+</ScrollDownArrow>
+
+
+
+    <ExperienceContainer id="experience">
+      <ExperienceHeading>Where I've Been</ExperienceHeading>
       <ExperienceGrid>
         <ExperienceCard>
           <h2>UIUX Designer Intern</h2>
           <h3>CPFB (Singapore) · Aug 2023 – Dec 2023</h3>
           <p>
-            Collaborated with cross-functional teams to revamp internal government systems,
-            conducted usability tests, and delivered high-fidelity prototypes improving user workflows.
+          Crafted and fine-tuned UI/UX designs, from wireframes to full landing pages using Figma,
+           user feedback, and responsive design best practices.
           </p>
         </ExperienceCard>
 
@@ -182,8 +217,8 @@ const Home = () => {
           <h2>AI/ML Research Intern</h2>
           <h3>TVS Motor (Bangalore) · May 2024 – Aug 2023</h3>
           <p>
-            Worked on explainable AI techniques for healthcare data, analyzing model transparency
-            and interpretability for clinical insights in medical AI.
+          Proposed an AI/ML-driven Automated Storage and Retrieval System (ASRS) aimed at optimizing warehouse operations, and 
+          explored models like LSTM, Genetic Algorithms, and ARIMA
           </p>
         </ExperienceCard>
         {/* Add more cards as needed */}

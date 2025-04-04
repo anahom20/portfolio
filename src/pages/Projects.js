@@ -13,15 +13,24 @@ const ProjectContainer = styled.div`
     padding: 4rem 2rem;
   }
 
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+  }
+
 `;
 
 const Heading = styled.h1`
   font-size: 2.2rem;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-family: 'Clash Grotesk', sans-serif;
 `;
+
 
 const Grid = styled.div`
   display: grid;
@@ -89,7 +98,9 @@ const Card = styled.div`
 const Projects = () => {
   return (
     <ProjectContainer>
-      <Heading>Projects</Heading>
+      <Heading>My Builds</Heading>
+      <h2>with equal parts code and caffeine, running mostly on vibes</h2>
+
       <Grid>
         {projects.map((project, index) => (
           <Card key={index}>
