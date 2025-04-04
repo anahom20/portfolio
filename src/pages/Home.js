@@ -6,7 +6,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 6rem 12%;
-  min-height: 90vh;
+  min-height: 80vh;
   background: linear-gradient(to bottom, #f7f4ef 70%,rgb(232, 191, 174) 30%);
 
   @media (max-width: 768px) {
@@ -73,63 +73,80 @@ const ImageBlock = styled.div`
   }
 `;
 
-const ProjectsSection = styled.section`
+const ExperienceContainer = styled.div`
   padding: 6rem 12%;
-  background: #e8bfae;
+  background:rgb(232, 191, 174) ;
+  min-height: 80vh;
+  font-family: 'Inter', sans-serif;
 
-  margin-top: -4rem;
-  
-  h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    color: #1f2937;
-    font-family: 'Clash Grotesk', sans-serif;
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
   }
-    
 `;
 
+const ExperienceHeading = styled.h1`
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  font-family: 'Clash Grotesk', sans-serif;
+`;
 
-const ProjectsGrid = styled.div`
+const ExperienceGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  gap: 4rem;
 `;
 
-
-const ProjectCard = styled.a`
-  background: white;
-  // border-radius: 12px;
-  padding: 1.5rem;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+const ExperienceCard = styled.div`
+  background: #f7f4ef;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 
   &:hover {
     transform: translateY(-5px);
+    background: rgb(249, 251, 250);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   }
 
   img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    object-fit: cover;
+    max-width: 480px;
+    margin: 0 auto 1.5rem;
+    display: block;
     height: 160px;
-    background: #f3f4f6;
+    object-fit: contain;
   }
 
-  h4 {
+  h2 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 1rem;
   }
 
   p {
     font-size: 0.95rem;
     color: #4b5563;
+    line-height: 1.6;
   }
 `;
+
+
 
 
 const Home = () => {
@@ -145,26 +162,33 @@ const Home = () => {
       </TextBlock>
 
       <ImageBlock>
-        <img src="/images/profile.JPG" alt="Portrait" />
+        <img src="/images/Mohana.JPG" alt="Portrait" />
       </ImageBlock>
     </Container>
 
-    {/* <ProjectsSection>
-    <h3>Projects</h3>
-    <ProjectsGrid>
-      <ProjectCard href="https://your-project-link.com" target="_blank" rel="noopener noreferrer">
-        <img src="/project1-thumbnail.jpg" alt="Project 1" />
-        <h4>Lumify.</h4>
-        <p>Digital solution to reconnect HDB neighbors and revive the Kampung spirit</p>
-      </ProjectCard>
+    <ExperienceContainer>
+      <ExperienceHeading>Work Experience</ExperienceHeading>
+      <ExperienceGrid>
+        <ExperienceCard>
+          <h2>UIUX Designer Intern</h2>
+          <h3>CPFB (Singapore) · Aug 2023 – Dec 2023</h3>
+          <p>
+            Collaborated with cross-functional teams to revamp internal government systems,
+            conducted usability tests, and delivered high-fidelity prototypes improving user workflows.
+          </p>
+        </ExperienceCard>
 
-      <ProjectCard href="https://your-project-link.com" target="_blank" rel="noopener noreferrer">
-        <img src="/project2-thumbnail.jpg" alt="Project 2" />
-        <h4>STEVFNS-P</h4>
-        <p>Web Application for energy systems optimisation</p>
-      </ProjectCard>
-    </ProjectsGrid>
-    </ProjectsSection> */}
+        <ExperienceCard>
+          <h2>AI/ML Research Intern</h2>
+          <h3>TVS Motor (Bangalore) · May 2024 – Aug 2023</h3>
+          <p>
+            Worked on explainable AI techniques for healthcare data, analyzing model transparency
+            and interpretability for clinical insights in medical AI.
+          </p>
+        </ExperienceCard>
+        {/* Add more cards as needed */}
+      </ExperienceGrid>
+    </ExperienceContainer>
 </>
     
   );

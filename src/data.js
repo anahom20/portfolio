@@ -12,7 +12,7 @@ export const projects = [
       figma: "https://www.figma.com/design/QbPeT3CAZU4OOcEGvAuWnF/Lumify.?node-id=0-1&t=7Qzuf9ElUPI87QFH-1",
     },
     {
-      title: "Predition of Leukemia",
+      title: "Detection of Leukemia",
       image:"/images/leukemia1.jpg",
       description: "AI-driven solution to accurately diagnose Leukemia through blood smear samples",
       github: "https://github.com/anahom20/leukemia_classification",
